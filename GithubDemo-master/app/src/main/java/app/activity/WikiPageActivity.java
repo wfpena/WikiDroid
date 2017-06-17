@@ -41,7 +41,7 @@ public class WikiPageActivity extends AppCompatActivity {
 
 
 
-        Log.d("AADSDAS",newString);
+        //Log.d("Log de Teste",newString);
     }
 
 
