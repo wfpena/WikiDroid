@@ -102,9 +102,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
                             Intent i = new Intent(itemView.getContext(),WikiPageActivity.class);
                             i.putExtra("STRING_I_NEED",mItems.get(getAdapterPosition()).getHtmlText());
                             itemView.getContext().startActivity(i);
-
-                           // Toast.makeText(itemView.getContext(), "LER", Toast.LENGTH_SHORT).show();
-
                         }
                     })
                 .setNegativeButton("EXCLUIR", new DialogInterface.OnClickListener() {
