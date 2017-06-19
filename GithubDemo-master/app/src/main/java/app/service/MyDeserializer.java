@@ -10,10 +10,6 @@ import java.lang.reflect.Type;
 
 import app.model.TextWiki;
 
-/**
- * Created by User on 26/12/2016.
- */
-
 class MyDeserializer implements JsonDeserializer<TextWiki>
 {
     @Override

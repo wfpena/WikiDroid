@@ -28,6 +28,8 @@ import com.example.githubdemo.app.R;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//Adapter
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     List<PageObject> mItems;
 

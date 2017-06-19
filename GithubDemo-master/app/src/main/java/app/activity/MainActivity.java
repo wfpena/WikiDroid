@@ -37,9 +37,6 @@ public class MainActivity extends ActionBarActivity {
         realm = Realm.getDefaultInstance();
         rr = realm.where(PageObject.class).findAll();
 
-        /**
-         * Set up Android CardView/RecycleView
-         */
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -47,20 +44,18 @@ public class MainActivity extends ActionBarActivity {
         mRecyclerView.setAdapter(mCardAdapter);
         realm.beginTransaction();
         rr = realm.where(PageObject.class).findAll();
-        //Log.d("DEG",rr.size()+"");
         //rr.clear();
         realm.commitTransaction();
-        //Log.d("DEG",rr.size()+"");
+        //Log.d("Testando o realm",rr.size()+"");
         for (int i=0; i<rr.size(); i++) {
             //realm.
             //Log.d("DEG",rr.get(0).getTitle());
             mCardAdapter.addData(rr.get(i));
         }
 
+        //Fechar o realm
         realm.close();
-        /**
-         * START: button set up
-         */
+
         Button bClear = (Button) findViewById(R.id.button_clear);
         Button bFetch = (Button) findViewById(R.id.button_fetch);
         bClear.setOnClickListener(new View.OnClickListener() {

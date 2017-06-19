@@ -3,10 +3,7 @@ package app.domain;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-/**
- * Created by User on 27/12/2016.
- */
-
+//Objeto que representa a página, para ser armazenada no Banco de Dados do Realm
 public class PageObject extends RealmObject {
     @PrimaryKey
     private long id;
